@@ -1,0 +1,102 @@
+{
+  "stats": [
+    {
+      "id": 1,
+      "title": "Cultivos Activos",
+      "value": 12,
+      "icon": "bi-seed",
+      "color": "success",
+      "change": "+2",
+      "changeType": "positive"
+    },
+    {
+      "id": 2,
+      "title": "Hectáreas",
+      "value": 45.5,
+      "icon": "bi-geo-alt",
+      "color": "primary",
+      "change": "+5.2",
+      "changeType": "positive"
+    },
+    {
+      "id": 3,
+      "title": "Producción (ton)",
+      "value": 128.7,
+      "icon": "bi-graph-up",
+      "color": "info",
+      "change": "+12.3",
+      "changeType": "positive"
+    },
+    {
+      "id": 4,
+      "title": "Eficiencia",
+      "value": 87.2,
+      "icon": "bi-percent",
+      "color": "warning",
+      "change": "+2.1",
+      "changeType": "positive"
+    }
+  ],
+  "recentActivities": [
+    {
+      "id": 1,
+      "type": "riego",
+      "message": "Programación de riego automático para sector A",
+      "time": "2 horas atrás",
+      "icon": "bi-droplet-fill",
+      "color": "info"
+    },
+    {
+      "id": 2,
+      "type": "fertilizacion",
+      "message": "Aplicación de fertilizante NPK en cultivo de maíz",
+      "time": "4 horas atrás",
+      "icon": "bi-flower1",
+      "color": "success"
+    },
+    {
+      "id": 3,
+      "type": "monitoreo",
+      "message": "Revisión de sensores de humedad del suelo",
+      "time": "6 horas atrás",
+      "icon": "bi-thermometer-half",
+      "color": "warning"
+    },
+    {
+      "id": 4,
+      "type": "cosecha",
+      "message": "Inicio de cosecha en campo de trigo",
+      "time": "1 día atrás",
+      "icon": "bi-scissors",
+      "color": "primary"
+    }
+  ],
+  "weather": {
+    "current": {
+      "temperature": 24,
+      "humidity": 65,
+      "description": "Soleado",
+      "icon": "bi-sun"
+    },
+    "forecast": [
+      {
+        "day": "Hoy",
+        "high": 26,
+        "low": 18,
+        "icon": "bi-sun"
+      },
+      {
+        "day": "Mañana",
+        "high": 28,
+        "low": 20,
+        "icon": "bi-cloud-sun"
+      },
+      {
+        "day": "Miércoles",
+        "high": 25,
+        "low": 17,
+        "icon": "bi-cloud-rain"
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Fertilización Sector A",
+      "type": "fertilizacion",
+      "date": "2024-01-20",
+      "time": "08:00",
+      "duration": 120,
+      "priority": "high",
+      "status": "scheduled",
+      "notes": "Aplicación de fertilizante NPK 15-15-15"
+    },
+    {
+      "id": 2,
+      "title": "Control de Malezas",
+      "type": "mantenimiento",
+      "date": "2024-01-22",
+      "time": "10:00",
+      "duration": 180,
+      "priority": "medium",
+      "status": "scheduled",
+      "notes": "Aplicación de herbicida selectivo"
+    },
+    {
+      "id": 3,
+      "title": "Monitoreo de Plagas",
+      "type": "monitoreo",
+      "date": "2024-01-25",
+      "time": "14:00",
+      "duration": 90,
+      "priority": "low",
+      "status": "scheduled",
+      "notes": "Revisión de trampas y conteo de insectos"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Revisar sensores de humedad",
+      "type": "mantenimiento",
+      "dueDate": "2024-01-18",
+      "priority": "high",
+      "status": "pending",
+      "assignedTo": "Técnico"
+    },
+    {
+      "id": 2,
+      "title": "Actualizar inventario de insumos",
+      "type": "administrativo",
+      "dueDate": "2024-01-19",
+      "priority": "medium",
+      "status": "pending",
+      "assignedTo": "Administrador"
+    },
+    {
+      "id": 3,
+      "title": "Preparar reporte mensual",
+      "type": "reporte",
+      "dueDate": "2024-01-31",
+      "priority": "medium",
+      "status": "pending",
+      "assignedTo": "Gerente"
+    }
+  ],
+  "statistics": {
+    "totalEvents": 3,
+    "completedEvents": 0,
+    "pendingTasks": 3,
+    "overdueTasks": 0
+  }
+}

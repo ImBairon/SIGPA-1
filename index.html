@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+        <title>SIGPA Demo - Autenticación</title>
+
+        <!-- Bootstrap 5.3 CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Bootstrap Icons -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+        <!-- Google Fonts - Outfit -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Firebase SDK v10 -->
+        <script type="module">
+            import './js/core/firebase.app.js';
+            import './js/core/auth.js';
+            import './js/core/theme.js';
+        </script>
+
+        <link rel="stylesheet" href="./css/base.css" />
+        <link rel="stylesheet" href="./css/theme.css" />
+        <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/theme-selector.css" />
+    </head>
+    <body>
+        <!-- Theme Toggle Button -->
+        <button
+            type="button"
+            id="themeToggle"
+            class="btn btn-outline-secondary position-fixed"
+            style="top: 1rem; right: 1rem; z-index: 1050;"
+            aria-label="Cambiar tema"
+            tabindex="0"
+        >
+            <i class="bi bi-sun-fill" id="themeIcon"></i>
+        </button>
+
+        <div class="l-auth">
+            <div class="c-auth">
+                <div class="c-auth__header">
+                    <h1 class="c-auth__title">SIGPA Demo</h1>
+                    <p class="c-auth__subtitle">
+                        Sistema de Gestión de Producción Agrícola
+                    </p>
+                </div>
+
+                <div class="c-auth__form-container">
+                    <div class="c-auth__tabs">
+                        <button
+                            type="button"
+                            class="c-auth__tab c-auth__tab--active"
+                            data-tab="login"
+                        >
+                            Iniciar Sesión
+                        </button>
+                        <button
+                            type="button"
+                            class="c-auth__tab"
+                            data-tab="register"
+                        >
+                            Crear Cuenta
+                        </button>
+                    </div>
+
+                    <form id="authForm" class="c-auth__form">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                required
+                            />
+                            <div id="emailFeedback" class="invalid-feedback" style="display: none;"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <div class="input-group">
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="password"
+                                    name="password"
+                                    required
+                                />
+                                <button
+                                    class="btn btn-outline-secondary"
+                                    type="button"
+                                    id="passwordToggle"
+                                    aria-label="Mostrar/ocultar contraseña"
+                                >
+                                    <i class="bi bi-eye" id="passwordIcon"></i>
+                                </button>
+                            </div>
+                            <div id="passwordFeedback" class="invalid-feedback" style="display: none;"></div>
+
+                            <!-- Indicador de fortaleza de contraseña (solo visible en registro) -->
+                            <div id="passwordStrength" class="mt-2" style="display: none;">
+                                <div class="d-flex align-items-center mb-2">
+                                    <small class="me-2">Fortaleza:</small>
+                                    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+                                        <div id="strengthBar" class="progress-bar" role="progressbar" style="width: 0%"></div>
+                                    </div>
+                                    <small id="strengthText" class="fw-bold"></small>
+                                </div>
+                                <div id="strengthFeedback" class="small text-muted"></div>
+                                <div id="strengthSuggestions" class="small mt-1"></div>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary w-100 mb-3"
+                        >
+                            <span id="submitText">Iniciar Sesión</span>
+                            <span
+                                id="submitSpinner"
+                                class="spinner-border spinner-border-sm ms-2"
+                                style="display: none"
+                            ></span>
+                        </button>
+                    </form>
+
+                    <div class="c-auth__divider">
+                        <span>o</span>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="googleBtn"
+                        class="btn btn-outline-secondary w-100"
+                    >
+                        <i class="bi bi-google me-2"></i>
+                        Continuar con Google
+                    </button>
+
+                    <div
+                        id="authError"
+                        class="c-auth__error"
+                        style="display: none"
+                    ></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap 5.3 JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Zod and zxcvbn CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/zod@4.1.1/+esm" type="module"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+
+        <!-- Scripts de la aplicación -->
+        <script type="module" src="./js/core/theme.js"></script>
+        <script type="module" src="./js/core/auth.js"></script>
+        <script type="module" src="./js/features/auth/validation.js"></script>
+
+        <!-- Theme Toggle Script -->
+        <script type="module">
+            import { toggleTheme, getCurrentTheme } from './js/core/theme.js';
+            import FormValidator from './js/features/auth/validation.js';
+
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+
+            const updateThemeIcon = () => {
+                const currentTheme = getCurrentTheme();
+                if (currentTheme === 'dark') {
+                    themeIcon.className = 'bi bi-moon-fill';
+                } else {
+                    themeIcon.className = 'bi bi-sun-fill';
+                }
+            };
+
+            const handleThemeToggle = () => {
+                toggleTheme();
+                updateThemeIcon();
+            };
+
+            const handleThemeToggleKeyDown = (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    handleThemeToggle();
+                }
+            };
+
+            // Event listeners
+            themeToggle.addEventListener('click', handleThemeToggle);
+            themeToggle.addEventListener('keydown', handleThemeToggleKeyDown);
+
+            // Update icon on theme change
+            document.addEventListener('themeChanged', updateThemeIcon);
+
+            // Initialize icon
+            updateThemeIcon();
+
+            // Initialize form validator
+            const formValidator = new FormValidator();
+
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.c-auth__tab');
+            const submitText = document.getElementById('submitText');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('c-auth__tab--active'));
+
+                    // Add active class to clicked tab
+                    tab.classList.add('c-auth__tab--active');
+
+                    // Update submit button text
+                    const tabType = tab.getAttribute('data-tab');
+                    if (tabType === 'login') {
+                        submitText.textContent = 'Iniciar Sesión';
+                    } else {
+                        submitText.textContent = 'Crear Cuenta';
+                    }
+
+                    // Dispatch custom event for validation system
+                    document.dispatchEvent(new CustomEvent('tabChanged', {
+                        detail: { tab: tabType }
+                    }));
+
+                    // Reset validation state when switching tabs
+                    formValidator.resetValidation();
+                });
+            });
+        </script>
+    </body>
+</html>

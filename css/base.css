@@ -1,0 +1,420 @@
+/* Reset y base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* Estilos base para SIGPA Demo */
+
+/* Configuración de fuentes */
+body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Mejoras en la tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Estilos para enlaces */
+a {
+    color: var(--link-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Estilos para botones */
+.btn {
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem rgba(4, 41, 58, 0.25);
+}
+
+/* Estilos para inputs */
+.form-control {
+    font-family: inherit;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+}
+
+.form-control:focus {
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+/* Mejoras para elementos de formulario mejorados */
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem rgba(4, 41, 58, 0.15);
+}
+
+/* Mejoras específicas para modo oscuro en inputs */
+[data-theme="dark"] .form-control {
+    background: rgba(30, 41, 59, 0.9);
+    color: #f8fafc;
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: #94a3b8;
+    opacity: 0.8;
+}
+
+[data-theme="dark"] .form-control:focus {
+    background: rgba(30, 41, 59, 1);
+    border-color: var(--accent-light);
+    color: #f8fafc;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .form-control:hover {
+    background: rgba(30, 41, 59, 0.95);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Estilos para labels */
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Utilidades */
+.u-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.u-text-center { text-align: center; }
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+
+.u-mb-0 { margin-bottom: 0; }
+.u-mb-1 { margin-bottom: 0.25rem; }
+.u-mb-2 { margin-bottom: 0.5rem; }
+.u-mb-3 { margin-bottom: 1rem; }
+.u-mb-4 { margin-bottom: 1.5rem; }
+.u-mb-5 { margin-bottom: 3rem; }
+
+.u-mt-0 { margin-top: 0; }
+.u-mt-1 { margin-top: 0.25rem; }
+.u-mt-2 { margin-top: 0.5rem; }
+.u-mt-3 { margin-top: 1rem; }
+.u-mt-4 { margin-top: 1.5rem; }
+.u-mt-5 { margin-top: 3rem; }
+
+.u-p-0 { padding: 0; }
+.u-p-1 { padding: 0.25rem; }
+.u-p-2 { padding: 0.5rem; }
+.u-p-3 { padding: 1rem; }
+.u-p-4 { padding: 1.5rem; }
+.u-p-5 { padding: 3rem; }
+
+/* Estados */
+.is-hidden { display: none !important; }
+.is-visible { display: block !important; }
+.is-active { background-color: var(--accent-primary); }
+.is-disabled { opacity: 0.6; pointer-events: none; }
+
+/* Focus visible para accesibilidad */
+*:focus {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+/* Mejoras en la accesibilidad */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Estilos para elementos con focus visible */
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
+
+/* Selección de texto */
+::selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Estilos para el spinner */
+.spinner-border {
+    color: currentColor;
+}
+
+/* Animaciones de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* NUEVO: Animación de entrada más elegante para la tarjeta */
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+        filter: blur(10px);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(20px) scale(0.98);
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* NUEVO: Animación de entrada escalonada para elementos */
+@keyframes staggerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar animaciones a elementos principales */
+.c-auth {
+    animation: cardEntrance 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.c-auth__header {
+    animation: staggerFadeIn 1.2s ease-out 0.4s both;
+}
+
+.c-auth__form-container {
+    animation: staggerFadeIn 1.2s ease-out 0.8s both;
+}
+
+/* NUEVO: Micro-interacción sutil al cargar la página */
+.c-auth {
+    animation: cardEntrance 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* NUEVO: Efecto de entrada para botones */
+.c-auth__form .btn-primary {
+    animation: staggerFadeIn 0.8s ease-out 1.6s both;
+}
+
+#googleBtn {
+    animation: staggerFadeIn 0.8s ease-out 1.8s both;
+}
+
+/* NUEVO: Efecto de entrada para tabs */
+.c-auth__tabs {
+    animation: staggerFadeIn 0.8s ease-out 1s both;
+}
+
+/* NUEVO: Efecto de entrada para separador */
+.c-auth__divider {
+    animation: staggerFadeIn 0.8s ease-out 2s both;
+}
+
+/* Efectos de hover mejorados */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(4, 41, 58, 0.2);
+}
+
+/* Mejoras en la tipografía */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Estilos para elementos de estado */
+.is-valid {
+    border-color: var(--success) !important;
+}
+
+.is-invalid {
+    border-color: var(--danger) !important;
+}
+
+/* Estilos para elementos de carga */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Estilos para elementos deshabilitados */
+.disabled, :disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Estilos para elementos activos */
+.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Estilos para elementos seleccionados */
+.selected {
+    background-color: var(--accent-secondary);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Ajustes de tipografía para tablets */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1.125rem; }
+    h6 { font-size: 1rem; }
+
+    /* Ajustes de espaciado para tablets */
+    .u-mb-5 { margin-bottom: 2rem; }
+    .u-mt-5 { margin-top: 2rem; }
+    .u-p-5 { padding: 2rem; }
+}
+
+@media (max-width: 576px) {
+    /* Ajustes de tipografía para móviles */
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    h4 { font-size: 1.125rem; }
+    h5 { font-size: 1rem; }
+    h6 { font-size: 0.875rem; }
+
+    /* Ajustes de espaciado para móviles */
+    .u-mb-5 { margin-bottom: 1.5rem; }
+    .u-mt-5 { margin-top: 1.5rem; }
+    .u-p-5 { padding: 1.5rem; }
+
+    /* Ajustes de contenedores */
+    .container-fluid {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
