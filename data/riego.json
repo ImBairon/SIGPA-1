@@ -1,0 +1,88 @@
+{
+  "sectors": [
+    {
+      "id": 1,
+      "name": "Sector A - Maíz",
+      "area": 12.5,
+      "status": "active",
+      "humidity": 78,
+      "lastIrrigation": "2024-01-15T08:00:00Z",
+      "nextIrrigation": "2024-01-16T06:00:00Z",
+      "duration": 45,
+      "waterConsumption": 125.5,
+      "efficiency": 92
+    },
+    {
+      "id": 2,
+      "name": "Sector B - Trigo",
+      "area": 8.3,
+      "status": "scheduled",
+      "humidity": 65,
+      "lastIrrigation": "2024-01-14T14:30:00Z",
+      "nextIrrigation": "2024-01-15T16:00:00Z",
+      "duration": 30,
+      "waterConsumption": 89.2,
+      "efficiency": 88
+    },
+    {
+      "id": 3,
+      "name": "Sector C - Soja",
+      "area": 15.2,
+      "status": "maintenance",
+      "humidity": 45,
+      "lastIrrigation": "2024-01-13T10:15:00Z",
+      "nextIrrigation": "2024-01-16T12:00:00Z",
+      "duration": 60,
+      "waterConsumption": 203.8,
+      "efficiency": 85
+    },
+    {
+      "id": 4,
+      "name": "Sector D - Girasol",
+      "area": 9.5,
+      "status": "inactive",
+      "humidity": 82,
+      "lastIrrigation": "2024-01-15T12:00:00Z",
+      "nextIrrigation": "2024-01-18T08:00:00Z",
+      "duration": 35,
+      "waterConsumption": 67.3,
+      "efficiency": 90
+    }
+  ],
+  "schedule": [
+    {
+      "id": 1,
+      "sectorId": 1,
+      "sectorName": "Sector A - Maíz",
+      "startTime": "2024-01-16T06:00:00Z",
+      "duration": 45,
+      "waterAmount": 125.5,
+      "status": "scheduled"
+    },
+    {
+      "id": 2,
+      "sectorId": 2,
+      "sectorName": "Sector B - Trigo",
+      "startTime": "2024-01-15T16:00:00Z",
+      "duration": 30,
+      "waterAmount": 89.2,
+      "status": "scheduled"
+    },
+    {
+      "id": 3,
+      "sectorId": 3,
+      "sectorName": "Sector C - Soja",
+      "startTime": "2024-01-16T12:00:00Z",
+      "duration": 60,
+      "waterAmount": 203.8,
+      "status": "scheduled"
+    }
+  ],
+  "statistics": {
+    "totalWaterUsed": 485.8,
+    "averageEfficiency": 88.8,
+    "totalArea": 45.5,
+    "activeSectors": 2,
+    "scheduledSectors": 2
+  }
+}
