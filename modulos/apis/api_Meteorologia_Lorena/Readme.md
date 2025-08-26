@@ -26,6 +26,13 @@ Se utilizó la API de **[OpenWeatherMap](https://openweathermap.org/)** bajo el 
 3. Ingresa a tu cuenta y ve a la sección **API keys**.
 4. Copia tu clave (ejemplo: `1234567890abcdef`).
 5. Pega tu API Key en el archivo `app.js` en la siguiente línea:
+## 🔑 API Utilizada
+
+Esta aplicación usa la API de [Open-Meteo](https://open-meteo.com/), que ofrece datos meteorológicos sin necesidad de autenticación.
+
+- ❌ No se requiere API Key
+- ✔️ Acceso libre y gratuito
+- ✔️ Ideal para proyectos personales o educativos
 
 ```js
 const apiKey = "TU_API_KEY";
