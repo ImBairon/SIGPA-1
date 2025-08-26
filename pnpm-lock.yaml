@@ -7,13 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      zod:
-        specifier: ^4.1.1
-        version: 4.1.1
-      zxcvbn:
-        specifier: ^4.4.2
-        version: 4.4.2
     devDependencies:
       http-server:
         specifier: ^14.1.1
@@ -27,6 +20,12 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: ^0.5.9
         version: 0.5.14(prettier@3.6.2)
+      zod:
+        specifier: ^4.1.1
+        version: 4.1.1
+      zxcvbn:
+        specifier: ^4.4.2
+        version: 4.4.2
 
 packages:
 
