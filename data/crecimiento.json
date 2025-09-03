@@ -1,0 +1,81 @@
+{
+  "metrics": [
+    {
+      "id": 1,
+      "crop": "Maíz",
+      "sector": "Sector A",
+      "plantingDate": "2024-01-05",
+      "currentHeight": 45,
+      "expectedHeight": 120,
+      "growthRate": 2.5,
+      "health": "excellent",
+      "lastMeasurement": "2024-01-15T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "crop": "Trigo",
+      "sector": "Sector B",
+      "plantingDate": "2024-01-10",
+      "currentHeight": 25,
+      "expectedHeight": 80,
+      "growthRate": 1.8,
+      "health": "good",
+      "lastMeasurement": "2024-01-15T08:00:00Z"
+    },
+    {
+      "id": 3,
+      "crop": "Soja",
+      "sector": "Sector C",
+      "plantingDate": "2024-01-08",
+      "currentHeight": 15,
+      "expectedHeight": 90,
+      "growthRate": 2.1,
+      "health": "excellent",
+      "lastMeasurement": "2024-01-15T08:00:00Z"
+    }
+  ],
+  "charts": [
+    {
+      "id": 1,
+      "title": "Crecimiento Semanal - Maíz",
+      "type": "line",
+      "data": {
+        "labels": ["Semana 1", "Semana 2", "Semana 3", "Semana 4"],
+        "datasets": [
+          {
+            "label": "Altura (cm)",
+            "data": [5, 12, 25, 45],
+            "borderColor": "rgb(75, 192, 192)",
+            "backgroundColor": "rgba(75, 192, 192, 0.2)"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "title": "Comparación de Cultivos",
+      "type": "bar",
+      "data": {
+        "labels": ["Maíz", "Trigo", "Soja"],
+        "datasets": [
+          {
+            "label": "Tasa de Crecimiento (cm/día)",
+            "data": [2.5, 1.8, 2.1],
+            "backgroundColor": [
+              "rgba(255, 99, 132, 0.8)",
+              "rgba(54, 162, 235, 0.8)",
+              "rgba(255, 205, 86, 0.8)"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "statistics": {
+    "averageGrowthRate": 2.13,
+    "totalCrops": 3,
+    "excellentHealth": 2,
+    "goodHealth": 1,
+    "averageHeight": 28.3
+  }
+}

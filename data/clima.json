@@ -1,0 +1,83 @@
+{
+  "current": {
+    "temperature": 24,
+    "humidity": 65,
+    "pressure": 1013,
+    "windSpeed": 12,
+    "windDirection": "SE",
+    "description": "Soleado",
+    "icon": "bi-sun",
+    "feelsLike": 26,
+    "uvIndex": 7,
+    "visibility": 10
+  },
+  "forecast": [
+    {
+      "day": "Hoy",
+      "date": "2024-01-15",
+      "high": 26,
+      "low": 18,
+      "icon": "bi-sun",
+      "description": "Soleado",
+      "precipitation": 0,
+      "humidity": 60
+    },
+    {
+      "day": "Mañana",
+      "date": "2024-01-16",
+      "high": 28,
+      "low": 20,
+      "icon": "bi-cloud-sun",
+      "description": "Parcialmente nublado",
+      "precipitation": 10,
+      "humidity": 65
+    },
+    {
+      "day": "Miércoles",
+      "date": "2024-01-17",
+      "high": 25,
+      "low": 17,
+      "icon": "bi-cloud-rain",
+      "description": "Lluvia ligera",
+      "precipitation": 80,
+      "humidity": 85
+    },
+    {
+      "day": "Jueves",
+      "date": "2024-01-18",
+      "high": 27,
+      "low": 19,
+      "icon": "bi-cloud-sun",
+      "description": "Parcialmente nublado",
+      "precipitation": 20,
+      "humidity": 70
+    },
+    {
+      "day": "Viernes",
+      "date": "2024-01-19",
+      "high": 29,
+      "low": 21,
+      "icon": "bi-sun",
+      "description": "Soleado",
+      "precipitation": 0,
+      "humidity": 55
+    }
+  ],
+  "alerts": [
+    {
+      "id": 1,
+      "type": "warning",
+      "title": "Alerta de Viento",
+      "description": "Vientos fuertes esperados mañana",
+      "severity": "moderate",
+      "startTime": "2024-01-16T06:00:00Z",
+      "endTime": "2024-01-16T18:00:00Z"
+    }
+  ],
+  "statistics": {
+    "averageTemperature": 25.2,
+    "totalPrecipitation": 45.5,
+    "sunnyDays": 12,
+    "rainyDays": 3
+  }
+}

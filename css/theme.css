@@ -1,0 +1,94 @@
+/* Variables CSS para temas */
+:root {
+    /* Colores principales */
+    --primary: #04293A;
+    --primary-light: #0B4F6C;
+    --primary-lighter: #1A6B8F;
+    --secondary: #1E3A8A;
+    --accent: #3B82F6;
+    --accent-light: #60A5FA;
+    --accent-tertiary: #93C5FD;
+
+    /* Colores de fondo */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8FAFC;
+    --bg-accent: #F1F5F9;
+
+    /* Colores de texto */
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --text-accent: #1E40AF;
+
+    /* Colores de borde */
+    --border-primary: #E2E8F0;
+    --border-secondary: #CBD5E1;
+    --border-accent: #94A3B8;
+
+    /* Colores de estado */
+    --success: #10B981;
+    --danger: #EF4444;
+    --warning: #F59E0B;
+    --info: #3B82F6;
+
+    /* Sombras */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Tema oscuro */
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-accent: #1e293b;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-accent: #60a5fa;
+
+    --border-primary: #334155;
+    --border-secondary: #475569;
+    --border-accent: #64748b;
+
+    --link-primary: #60a5fa;
+    --link-hover: #93c5fd;
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Tema sistema - se aplica automáticamente */
+@media (prefers-color-scheme: dark) {
+    [data-theme="system"] {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-tertiary: #334155;
+        --bg-accent: #1e293b;
+
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
+        --text-accent: #60a5fa;
+
+        --border-primary: #334155;
+        --border-secondary: #475569;
+        --border-accent: #64748b;
+
+        --link-primary: #60a5fa;
+        --link-hover: #93c5fd;
+
+        --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
+        --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Transiciones suaves para cambios de tema */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

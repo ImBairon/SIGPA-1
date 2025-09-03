@@ -1,0 +1,77 @@
+<div class="c-topbar__left">
+    <!-- Botón de menú móvil -->
+    <button type="button" class="btn btn-outline-secondary d-md-none" id="mobileMenuBtn" aria-label="Abrir menú">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <div class="c-topbar__clock" id="clockContainer">
+        <i class="bi bi-clock"></i>
+        <span id="clockDisplay">--:--</span>
+    </div>
+</div>
+
+<div class="c-topbar__right">
+    <div class="c-topbar__theme">
+        <div class="theme-selector">
+            <button class="theme-toggle-btn" type="button" id="themeDropdown" aria-expanded="false" aria-label="Cambiar tema">
+                <div class="theme-toggle-icon">
+                    <i class="bi bi-sun-fill theme-icon-light"></i>
+                    <i class="bi bi-moon-fill theme-icon-dark"></i>
+                </div>
+                <span class="theme-toggle-text" id="themeText">Tema</span>
+                <i class="bi bi-chevron-down theme-toggle-arrow"></i>
+            </button>
+
+            <div class="theme-dropdown-menu" id="themeDropdownMenu">
+                <div class="theme-option" data-theme="light">
+                    <div class="theme-option-icon">
+                        <i class="bi bi-sun"></i>
+                    </div>
+                    <span class="theme-option-label">Claro</span>
+                    <div class="theme-option-check">
+                        <i class="bi bi-check"></i>
+                    </div>
+                </div>
+
+                <div class="theme-option" data-theme="dark">
+                    <div class="theme-option-icon">
+                        <i class="bi bi-moon"></i>
+                    </div>
+                    <span class="theme-option-label">Oscuro</span>
+                    <div class="theme-option-check">
+                        <i class="bi bi-check"></i>
+                    </div>
+                </div>
+
+                <div class="theme-option" data-theme="system">
+                    <div class="theme-option-icon">
+                        <i class="bi bi-display"></i>
+                    </div>
+                    <span class="theme-option-label">Sistema</span>
+                    <div class="theme-option-check">
+                        <i class="bi bi-check"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="c-profile" id="profileContainer">
+        <button type="button" class="c-profile__button" id="profileButton" aria-haspopup="menu" aria-expanded="false">
+            <img src="./assets/default-avatar.png" alt="Avatar" class="c-profile__avatar" id="profileAvatar">
+            <span class="c-profile__name" id="profileName">Usuario</span>
+            <i class="bi bi-chevron-down"></i>
+        </button>
+
+        <div class="c-menu" id="profileMenu" role="menu" style="display: none;">
+            <div class="c-menu__item" role="menuitem" tabindex="0">
+                <i class="bi bi-person"></i>
+                <a href="#/perfil" class="c-menu__link" id="editProfileLink">Editar Perfil</a>
+            </div>
+            <div class="c-menu__item" role="menuitem" tabindex="0" id="logoutItem">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Cerrar Sesión</span>
+            </div>
+        </div>
+    </div>
+</div>

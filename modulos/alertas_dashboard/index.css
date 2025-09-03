@@ -1,0 +1,9 @@
+body {
+  background-color: #f4f6f9;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+}

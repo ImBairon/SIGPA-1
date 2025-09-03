@@ -1,0 +1,86 @@
+{
+  "crops": [
+    {
+      "id": 1,
+      "name": "Maíz",
+      "variety": "Híbrido 123",
+      "area": 12.5,
+      "plantingDate": "2024-01-05",
+      "expectedHarvest": "2024-05-15",
+      "status": "vegetative",
+      "health": "excellent",
+      "yield": 8.2,
+      "notes": "Cultivo en excelente estado, sin plagas detectadas"
+    },
+    {
+      "id": 2,
+      "name": "Trigo",
+      "variety": "Invernal Premium",
+      "area": 8.3,
+      "plantingDate": "2024-01-10",
+      "expectedHarvest": "2024-04-20",
+      "status": "flowering",
+      "health": "good",
+      "yield": 6.8,
+      "notes": "Requiere monitoreo de humedad del suelo"
+    },
+    {
+      "id": 3,
+      "name": "Soja",
+      "variety": "RR2 BT",
+      "area": 15.2,
+      "plantingDate": "2024-01-08",
+      "expectedHarvest": "2024-06-10",
+      "status": "germination",
+      "health": "excellent",
+      "yield": 9.5,
+      "notes": "Germinación uniforme, densidad óptima"
+    },
+    {
+      "id": 4,
+      "name": "Girasol",
+      "variety": "Híbrido Alto Oleico",
+      "area": 9.5,
+      "plantingDate": "2024-01-12",
+      "expectedHarvest": "2024-05-25",
+      "status": "vegetative",
+      "health": "good",
+      "yield": 7.3,
+      "notes": "Crecimiento normal, requiere fertilización adicional"
+    }
+  ],
+  "statistics": {
+    "totalCrops": 4,
+    "totalArea": 45.5,
+    "averageYield": 8.0,
+    "excellentHealth": 2,
+    "goodHealth": 2,
+    "totalExpectedProduction": 31.8
+  },
+  "recentActivities": [
+    {
+      "id": 1,
+      "cropId": 1,
+      "cropName": "Maíz",
+      "activity": "Fertilización NPK",
+      "date": "2024-01-14",
+      "notes": "Aplicación de 200kg/ha de fertilizante"
+    },
+    {
+      "id": 2,
+      "cropId": 2,
+      "cropName": "Trigo",
+      "activity": "Control de malezas",
+      "date": "2024-01-13",
+      "notes": "Aplicación de herbicida selectivo"
+    },
+    {
+      "id": 3,
+      "cropId": 3,
+      "cropName": "Soja",
+      "activity": "Monitoreo de plagas",
+      "date": "2024-01-12",
+      "notes": "Sin presencia de insectos dañinos"
+    }
+  ]
+}

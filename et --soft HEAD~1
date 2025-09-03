@@ -1,0 +1,223 @@
+[33mcommit 3319b7211aa7f5c1677aaf0d429f7e163b08100a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/alertas[m[33m)[m
+Merge: 301d022 2572af2
+Author: Johan Nicolas Bautista Raba <johanbautista222@unisangil.edu.co>
+Date:   Tue Sep 2 22:16:38 2025 -0500
+
+    Subiendo cambios al repo
+
+[33mcommit 301d022f190d5829cfd95e229465e77e58310890[m[33m ([m[1;32mmain[m[33m)[m
+Author: NicolasB <johanbautista4037@gmail.com>
+Date:   Tue Sep 2 17:28:55 2025 -0500
+
+    Entrega del módulo de alertas y notificaciones 2
+
+[33mcommit 0b0b6bf84eef70dfafe290ee6ca4b381e0556602[m
+Author: NicolasB <johanbautista4037@gmail.com>
+Date:   Tue Aug 26 19:08:16 2025 -0500
+
+    Subo módulo completo de dashboard y notificaciones
+
+[33mcommit 24568dd50034432791875ffada8b64b9b0bc420d[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: 846439c 08a0e7f
+Author: NicolasB <johanbautista4037@gmail.com>
+Date:   Tue Aug 26 18:08:45 2025 -0500
+
+    Merge branch 'main' of https://github.com/DVelandia/SIGPA
+    # Please enter a commit message to explain why this merge is necessary,
+    # especially if it merges an updated upstream into a topic branch.
+    #
+    # Lines starting with '#' will be ignored, and an empty message aborts
+    # the commit.
+
+[33mcommit 846439c68b776ca0da0aef3313367386355c2bca[m
+Author: NicolasB <johanbautista4037@gmail.com>
+Date:   Tue Aug 26 17:47:41 2025 -0500
+
+    Primera entrega repositorio modulo alertas y dashboard
+
+[33mcommit 08a0e7fa57180ad124520f34afd4e52102390fc1[m
+Author: Hayder Fino <162834041+HayderFino@users.noreply.github.com>
+Date:   Mon Aug 25 23:54:53 2025 -0500
+
+    Update index.js
+
+[33mcommit bf0c5250f1ffb2c516243a4d11063cb7ee932c5c[m
+Author: DVelandia <dfvf03@gmail.com>
+Date:   Mon Aug 25 23:34:44 2025 -0500
+
+    add: feature calendar
+
+[33mcommit c9a26e2cb43398a9fbf499d8cd0e3ce537fee2f1[m
+Author: DVelandia <dfvf03@gmail.com>
+Date:   Mon Aug 25 23:34:27 2025 -0500
+
+    add: feature irrigation
+
+[33mcommit b51deb44f321cd2d97d5a5a924b77e5968bf3e5e[m
+Author: DVelandia <dfvf03@gmail.com>
+Date:   Mon Aug 25 23:33:50 2025 -0500
+
+    add: feature growth
+
+[33mcommit 98971f2e51432fa9033aa971d202154e8d1cb6dd[m
+Author: DVelandia <dfvf03@gmail.com>
+Date:   Mon Aug 25 23:33:15 2025 -0500
+
+    add: feature alert
+
+[33mcommit f03406c86695f0d8686af71b5cd0fef215481ef9[m
+Author: DVelandia <dfvf03@gmail.com>
+Date:   Mon Aug 25 23:31:11 2025 -0500
+
+    fix: update pnpm-lock.yaml
+
+[33mcommit 2d918dcea376a31710917ebe3c1a2236a49eb177[m
+Author: DVelandia <dfvf03@gmail.com>
+Date:   Mon Aug 25 23:26:46 2025 -0500
+
+    add: feature weather
+
+[33mcommit f44b790dba421b7feae63df406c62b3b4fe091d4[m
+Author: Hayder Fino <162834041+HayderFino@users.noreply.github.com>
+Date:   Mon Aug 25 23:08:28 2025 -0500
+
+    Update README.md
+
+[33mcommit 2572af2d9e6f4df6cda97fb500126795c445ffe8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Samanthaidk9 <124823214+Samanthaidk9@users.noreply.github.com>
+Date:   Mon Aug 25 22:07:24 2025 -0500
+
+    Create README.md
+
+[33mcommit a5abbc67ec4d09de2c3d8e5d39482c513a183635[m
+Author: Lore12-S <buitragomangielorena@gmail.com>
+Date:   Mon Aug 25 21:07:06 2025 -0500
+
+    Update Readme.md
+
+[33mcommit 33621cb29e8388d9d93d7ef5bff85781ad7723ae[m
+Author: Lore12-S <buitragomangielorena@gmail.com>
+Date:   Mon Aug 25 21:03:35 2025 -0500
+
+    Update Readme.md
+
+[33mcommit 524ad64b230cce8a2129988e82ef4126010b59f9[m
+Author: DVelandia <dfvf03@gmail.com>
+Date:   Mon Aug 25 20:12:26 2025 -0500
+
+    Init arch
+
+[33mcommit 9a802f928475c2210a99dcd75d1f777cba0b968c[m
+Author: Lore12-S <buitragomangielorena@gmail.com>
+Date:   Mon Aug 25 19:30:55 2025 -0500
+
+    Add files via upload
+    
+    en este push cargo la conexion a un api q permite obtener datos de temperatura y humedad y estado para el proyecto
+
+[33mcommit 597ee0cf0a6940436f4bef7442892ffebf31d4b2[m
+Author: BrandonGV <124822569+BrandonGV@users.noreply.github.com>
+Date:   Mon Aug 25 18:18:25 2025 -0500
+
+    Modulo Completo Revision Del Cultivo
+
+[33mcommit a65af95fe2130e68afcc8f177a0d63c31625f8cc[m
+Author: BrandonGV <124822569+BrandonGV@users.noreply.github.com>
+Date:   Mon Aug 25 18:17:37 2025 -0500
+
+    Delete modulos/ modulo equivocado
+
+[33mcommit 11cf3009941de1a453acdcfa0dee156fd43244eb[m
+Author: BrandonGV <124822569+BrandonGV@users.noreply.github.com>
+Date:   Mon Aug 25 18:15:10 2025 -0500
+
+    Mòdulo Completo De Registro de Crecimiento
+
+[33mcommit e5112f7e1082f630dd516b3b53e387903b35c246[m
+Author: gabrielarojas05 <rojasrojasgabriela07@gmail.com>
+Date:   Mon Aug 25 16:46:42 2025 -0500
+
+    Add files via upload
+
+[33mcommit d086670b45fd8e632f5318d61da4faa76fe5a854[m
+Author: Samanthaidk9 <124823214+Samanthaidk9@users.noreply.github.com>
+Date:   Mon Aug 25 15:37:51 2025 -0500
+
+    Subo modulo completo de API Nº1
+
+[33mcommit 40c233a305829dd7b0625558aa18071c8babe160[m
+Author: ImBairon <baironft10@gmail.com>
+Date:   Mon Aug 25 14:36:14 2025 -0500
+
+    Agrego estructura de módulos con README.md
+
+[33mcommit 5b84479a6ae7146545bb600cedcc02e336c7ae57[m
+Author: Hayder Fino <hafssuarez@gmail.com>
+Date:   Sat Aug 23 21:05:13 2025 -0500
+
+    Primer push con SSH
+
+[33mcommit 51369124a4d364baa55a6a38051f31abe45fef27[m
+Author: Hayder Fino <162834041+HayderFino@users.noreply.github.com>
+Date:   Fri Aug 22 23:56:58 2025 -0500
+
+    Add files via upload
+
+[33mcommit 07e8f00c2e2ac2240e79826210ad4245f4423e3b[m
+Author: Hayder Fino <162834041+HayderFino@users.noreply.github.com>
+Date:   Fri Aug 22 23:56:27 2025 -0500
+
+    Delete main.css
+
+[33mcommit 05080e32f1842436dee81c3185db2960d6e6dcf2[m
+Merge: dee84a1 96ba8c3
+Author: Hayder Fino <162834041+HayderFino@users.noreply.github.com>
+Date:   Fri Aug 22 23:55:45 2025 -0500
+
+    Merge pull request #1 from HayderFino/HayderFino
+    
+    modificaciones en dahb
+
+[33mcommit 96ba8c3b3e575a3d61fe760c0a41879a3a508d0e[m
+Author: Hayder Fino <162834041+HayderFino@users.noreply.github.com>
+Date:   Fri Aug 22 23:55:07 2025 -0500
+
+    Add files via upload
+
+[33mcommit dee84a1c4af63f9993b9d2ec7d39b45e728f7d3d[m
+Author: DVelandia <dfvf03@gmail.com>
+Date:   Fri Aug 22 22:30:48 2025 -0500
+
+    Init arch
+
+[33mcommit 5527b6a43dafc6690c71ea58e2a32528bdeef01f[m
+Author: Hayder Fino <162834041+FinoHayd@users.noreply.github.com>
+Date:   Fri Aug 22 22:19:52 2025 -0500
+
+    Rename WhatsApp Image 2025-08-21 at 9.42.08 PM.jpeg to flujo del sistema
+
+[33mcommit aab936795f79a1e6ce349400dde4a04339b3a596[m
+Author: Hayder Fino <162834041+FinoHayd@users.noreply.github.com>
+Date:   Fri Aug 22 22:18:29 2025 -0500
+
+    Add files via upload
+    
+    flujo del sistema
+
+[33mcommit 8c0546b12731d79e1d90023abb267790d1cd2f9b[m
+Author: Hayder Fino <162834041+FinoHayd@users.noreply.github.com>
+Date:   Fri Aug 22 22:15:54 2025 -0500
+
+    Add files via upload
+
+[33mcommit 5a290201a7637061e65df470e47fc8e6bf47925a[m
+Author: Hayder Fino <162834041+FinoHayd@users.noreply.github.com>
+Date:   Mon Aug 18 11:09:53 2025 -0500
+
+    Update README.md
+
+[33mcommit b75e5888fedcfc16f1ebb73b24113713ba585e22[m
+Author: Hayder Fino <162834041+FinoHayd@users.noreply.github.com>
+Date:   Mon Aug 18 11:08:40 2025 -0500
+
+    Initial commit

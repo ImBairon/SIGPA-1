@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Módulo | Revisión del Crecimiento de Cultivos</title>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="brand">
+        <img src="https://i.postimg.cc/1XR8c9Tp/sigpa.jpg" alt="Logo"/>
+        <div>
+          <h1>Revisión de Crecimiento de Cultivos</h1>
+          <div class="theme-hint"></div>
+        </div>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="tab-registro" aria-selected="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 5v14M5 12h14"/></svg>
+          Registro de datos
+        </button>
+        <button class="tab-btn" data-tab="tab-historial">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 5h18M3 12h18M3 19h18"/></svg>
+          Historial de revisiones
+        </button>
+        <button class="tab-btn" data-tab="tab-reportes">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 20V10m6 10V4m6 16v-8m4 8V8"/></svg>
+          Reportes y gráficas
+        </button>
+      </div>
+    </nav>
+
+    <!-- Sección Registro -->
+    <section class="content" id="tab-registro" role="tabpanel">
+      <form id="form-registro" class="card form-grid">
+        <h2>Registro de crecimiento</h2>
+        <label> Cultivo
+          <select name="cultivo" required>
+            <option value="">Seleccione...</option>
+            <option>Papa</option>
+            <option>Cebolla</option>
+          </select>
+        </label>
+        <label> Altura (cm)
+          <input type="number" name="altura" required />
+        </label>
+        <label> Fecha
+          <input type="date" name="fecha" required />
+        </label>
+        <label> Observaciones
+          <textarea name="observaciones"></textarea>
+        </label>
+        <button type="submit" class="btn">Guardar</button>
+      </form>
+    </section>
+
+    <!-- Sección Historial -->
+    <section class="content" id="tab-historial" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Historial de revisiones</h2>
+        <table id="tabla-historial">
+          <thead>
+            <tr><th>Cultivo</th><th>Altura</th><th>Fecha</th><th>Acciones</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sección Reportes -->
+    <section class="content" id="tab-reportes" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Reportes y gráficas</h2>
+        <canvas id="grafica"></canvas>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal Detalles -->
+  <div class="modal" id="modal-detalle" role="dialog" aria-modal="true" aria-label="Detalles de revisión">
+    <div class="dialog">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px">
+        <h3 style="margin:0">Detalle del registro</h3>
+        <button class="btn right" id="btn-cerrar-modal">Cerrar</button>
+      </div>
+      <div id="detalle-contenido" class="muted">Cargando…</div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"><div class="title"></div><div class="desc"></div></div>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+</body>
+</html>
