@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Diagnóstico de Plantas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="site-header">
+    <div class="header-inner">
+        <h1>Diagnóstico de Plantas 🌿</h1>
+        <p class="subtitle">Sube una imagen para realizar un análisis.</p>
+    </div>
+    </header>
+
+    <main class="container">
+    <div class="grid-layout">
+        <!-- Columna izquierda: subida + preview -->
+        <section class="upload card" aria-labelledby="uploadTitle">
+        <h2 id="uploadTitle">Sube tu imagen</h2>
+        <p class="muted">Al subir tu imagen realizaremos el analisis en pocos segundos.</p>
+
+        <label class="file-label" for="imageInput">Seleccionar imagen</label>
+        <input id="imageInput" type="file" accept="image/*" aria-describedby="uploadHelp" />
+
+        <div class="controls" id="uploadHelp">
+            <label for="scenario">Escenario</label>
+            <select id="scenario" aria-label="Escenario de simulación">
+            <option value="auto">Auto </option>
+            <option value="healthy">Sana </option>
+            <option value="disease">Enferma </option>
+            <option value="error">Error </option>
+            </select>
+
+            <button id="analyzeBtn" type="button" aria-live="polite">🔍 Analizar mi planta</button>
+        </div>
+
+        <div id="preview" class="preview hidden" aria-live="polite">
+            <h4>Previsualización</h4>
+            <img id="imgPreview" alt="Previsualización de la imagen subida" />
+        </div>
+        </section>
+
+        <!-- Columna derecha: resultados + mensajes -->
+        <aside class="right-column">
+        <section id="results" class="results hidden card" aria-labelledby="resultsTitle">
+            <h2 id="resultsTitle">Resultados</h2>
+            <div id="diagnosisContainer" role="region" aria-live="polite"></div>
+
+            <details class="raw-json">
+            <summary>Mostrar JSON simulado</summary>
+            <pre id="rawJson" tabindex="0" aria-label="JSON simulado"></pre>
+            </details>
+        </section>
+
+        <section id="errorBox" class="card hidden" role="alert" aria-live="assertive">
+            <h3>Mensajes</h3>
+            <div id="errorMessage"></div>
+        </section>
+        </aside>
+    </div>
+    </main>
+
+    <footer class="site-footer">
+    <p>Sube tu imagen y descubre el estado de tu planta.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

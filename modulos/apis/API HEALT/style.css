@@ -1,0 +1,199 @@
+/* -------- Reset y tipografía -------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg,#ecf9f6 0%, #e6f0ff 100%);
+    color: #0f1724;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* -------- Header -------- */
+.site-header {
+    text-align: center;
+    padding: 28px 16px 8px;
+}
+.header-inner { max-width: 1100px; margin: 0 auto; }
+.site-header h1 {
+  color: #05445E; /* profundo y profesional */
+    font-size: 28px;
+    letter-spacing: -0.2px;
+}
+.subtitle {
+    color: #256D85;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* -------- Contenedor principal (grid) -------- */
+.container { width: 100%; max-width: 1100px; margin: 26px auto; padding: 0 16px; }
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 22px;
+    align-items: start;
+}
+
+/* -------- Tarjetas base -------- */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 24px rgba(4,20,31,0.06);
+    border: 1px solid rgba(4,20,31,0.04);
+}
+
+/* -------- Upload box (izquierda) -------- */
+.upload h2 { color: #0F1724; font-size: 18px; margin-bottom: 6px; }
+.upload .muted { color: #4b6b74; font-size: 13px; margin-bottom: 12px; }
+
+.file-label {
+    display: inline-block;
+    font-size: 14px;
+    color: #05445E;
+    margin-bottom: 8px;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px dashed rgba(5,68,94,0.12);
+    background: #fbfdff;
+    cursor: pointer;
+    color: #05445E;
+    margin-bottom: 12px;
+}
+
+/* Controls (select + botón) */
+.controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+.controls label { font-size: 14px; color: #256D85; margin-right: 6px; }
+.controls select {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(4,20,31,0.08);
+    background: #f8fafb;
+    color: #0f1724;
+    min-width: 160px;
+}
+button#analyzeBtn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: linear-gradient(180deg,#ffca3a,#ffb703);
+    color: #072227;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(255,183,3,0.12);
+    transition: transform .16s ease, box-shadow .16s ease;
+}
+button#analyzeBtn:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(255,183,3,0.14); }
+
+/* -------- Preview -------- */
+.preview {
+    width: 100%;
+  max-width: 360px;      /* tamaño promedio del contenedor */
+  height: 320px;         /* tamaño promedio visual */
+    margin: 14px auto 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(4,20,31,0.02), rgba(4,20,31,0.01));
+    border: 1px solid rgba(5,68,94,0.08);
+    padding: 10px;
+}
+.preview h4 {
+    font-size: 14px;
+    color: #05445E;
+    margin-bottom: 8px;
+}
+.preview img {
+    width: auto;
+  max-width: 320px;    /* tamaño promedio controlado */
+  max-height: 280px;   /* controlar alto máximo */
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(4,20,31,0.06);
+}
+
+/* -------- Right column: resultados & mensajes -------- */
+.right-column { display: flex; flex-direction: column; gap: 14px; }
+.results h2 { color: #05445E; font-size: 18px; margin-bottom: 8px; }
+#diagnosisContainer .card { margin-top: 10px; }
+
+/* JSON raw area */
+.raw-json pre#rawJson {
+    background: #f7fbfc;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 13px;
+    color: #183642;
+    max-height: 260px;
+    overflow: auto;
+}
+
+/* Error box */
+#errorBox {
+    background: linear-gradient(180deg,#fff4f6,#fff7f9);
+    border-left: 4px solid #ff6b6b;
+    color: #7a1f1f;
+}
+
+/* Footer */
+.site-footer { text-align: center; padding: 18px 12px; color: #355; font-size: 13px; }
+
+/* Ocultar elementos cuando no se usan */
+.hidden { display: none; }
+
+/* -------- Accesibilidad y foco -------- */
+button:focus, select:focus, input[type="file"]:focus, .preview img:focus {
+    outline: 3px solid rgba(3,105,161,0.12);
+    outline-offset: 2px;
+}
+
+/* -------- Responsive: móvil (1 columna) -------- */
+@media (max-width: 880px) {
+    .grid-layout { grid-template-columns: 1fr; }
+    .preview { margin: 12px auto; max-width: 100%; height: auto; }
+    .controls { justify-content: space-between; }
+    input[type="file"] { margin-bottom: 8px; }
+}
+p:has(+ label[for="scenario"]),
+label[for="scenario"],
+#scenario {
+    display: none !important;
+}
+/* Ocultar solo la frase de los escenarios */
+#scenario-text {
+    display: none !important;
+}
+/* Oculta el párrafo que aparece justo antes de "Escenario:" */
+p:has(+ label[for="scenario"]) {
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
