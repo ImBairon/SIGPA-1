@@ -1,0 +1,61 @@
+{
+  "alerts": [
+    {
+      "id": 1,
+      "type": "warning",
+      "title": "Humedad del Suelo Baja",
+      "description": "El sector A presenta humedad por debajo del 30%",
+      "severity": "high",
+      "sector": "Sector A - Maíz",
+      "timestamp": "2024-01-15T10:30:00Z",
+      "status": "active",
+      "action": "Programar riego inmediato"
+    },
+    {
+      "id": 2,
+      "type": "info",
+      "title": "Fertilización Programada",
+      "description": "Recordatorio: Fertilización del sector B mañana a las 8:00",
+      "severity": "medium",
+      "sector": "Sector B - Trigo",
+      "timestamp": "2024-01-15T14:00:00Z",
+      "status": "pending",
+      "action": "Preparar insumos"
+    },
+    {
+      "id": 3,
+      "type": "danger",
+      "title": "Detección de Plagas",
+      "description": "Posible presencia de gusanos en el sector C",
+      "severity": "critical",
+      "sector": "Sector C - Soja",
+      "timestamp": "2024-01-15T16:45:00Z",
+      "status": "active",
+      "action": "Revisar inmediatamente"
+    }
+  ],
+  "notifications": [
+    {
+      "id": 1,
+      "type": "success",
+      "title": "Riego Completado",
+      "message": "El riego del sector D se completó exitosamente",
+      "timestamp": "2024-01-15T12:00:00Z",
+      "read": false
+    },
+    {
+      "id": 2,
+      "type": "info",
+      "title": "Mantenimiento Programado",
+      "description": "Revisión de sensores programada para el viernes",
+      "timestamp": "2024-01-15T09:15:00Z",
+      "read": true
+    }
+  ],
+  "statistics": {
+    "totalAlerts": 3,
+    "activeAlerts": 2,
+    "criticalAlerts": 1,
+    "unreadNotifications": 1
+  }
+}
